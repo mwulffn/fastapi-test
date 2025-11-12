@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vanilla Canvas Demo - Simple Node Editor</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app-container">
+    <header class="app-header">
+      <h1>🎨 Vanilla Canvas Demo - Simple Node Editor</h1>
+      <div class="header-info">
+        <span class="badge badge-warning">No Libraries - Pure JavaScript</span>
+      </div>
+    </header>
+
+    <div class="content-wrapper">
+      <aside class="sidebar">
+        <h3>Node Types</h3>
+        <p class="description">Click a button to add a node</p>
+
+        <div class="node-palette">
+          <button class="palette-btn start-btn" data-node-type="start">
+            <span class="icon">▶️</span>
+            <span>Start Node</span>
+          </button>
+
+          <button class="palette-btn action-btn" data-node-type="action">
+            <span class="icon">📋</span>
+            <span>Action Node</span>
+          </button>
+
+          <button class="palette-btn decision-btn" data-node-type="decision">
+            <span class="icon">◆</span>
+            <span>Decision Node</span>
+          </button>
+
+          <button class="palette-btn end-btn" data-node-type="end">
+            <span class="icon">⏹️</span>
+            <span>End Node</span>
+          </button>
+        </div>
+
+        <div class="controls">
+          <h4>Controls</h4>
+          <button id="clear-canvas" class="btn btn-danger">Clear Canvas</button>
+          <button id="connect-mode" class="btn btn-primary">Toggle Connect Mode</button>
+        </div>
+
+        <div class="info-section">
+          <h4>How to Use:</h4>
+          <ul>
+            <li>Click buttons to add nodes</li>
+            <li>Drag nodes to move them</li>
+            <li>Enable connect mode</li>
+            <li>Click two nodes to connect</li>
+            <li>Right-click to delete</li>
+          </ul>
+        </div>
+
+        <div class="info-section limitation">
+          <h4>⚠️ Limitations:</h4>
+          <p>This vanilla implementation demonstrates the complexity of building from scratch:</p>
+          <ul>
+            <li>No zoom/pan (would need complex transforms)</li>
+            <li>Basic drag & drop only</li>
+            <li>Simple connections (no bezier curves)</li>
+            <li>No edge routing</li>
+            <li>No undo/redo</li>
+            <li>No serialization</li>
+            <li>Limited styling</li>
+          </ul>
+          <p class="note">Building these features would take weeks vs hours with a library.</p>
+        </div>
+      </aside>
+
+      <div class="canvas-wrapper">
+        <canvas id="canvas"></canvas>
+        <div id="mode-indicator" class="mode-indicator">
+          <span>Mode: <strong id="current-mode">Move</strong></span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

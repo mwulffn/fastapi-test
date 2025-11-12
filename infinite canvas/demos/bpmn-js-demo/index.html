@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BPMN.js Demo - BPM Modeler</title>
+  <link rel="stylesheet" href="/src/style.css">
+</head>
+<body>
+  <div class="app-container">
+    <header class="app-header">
+      <h1>📊 BPMN.js Process Modeler Demo</h1>
+      <div class="header-actions">
+        <button id="download-xml" class="btn btn-primary">Download BPMN</button>
+        <button id="download-svg" class="btn btn-secondary">Download SVG</button>
+        <button id="zoom-in" class="btn btn-icon">+</button>
+        <button id="zoom-out" class="btn btn-icon">-</button>
+        <button id="zoom-reset" class="btn btn-icon">⟲</button>
+      </div>
+    </header>
+
+    <div class="content-wrapper">
+      <aside class="properties-panel">
+        <h3>BPMN Elements</h3>
+        <p class="help-text">Use the palette on the canvas to add BPMN elements</p>
+
+        <div class="info-section">
+          <h4>Standard BPMN 2.0</h4>
+          <ul>
+            <li>Start/End Events</li>
+            <li>Tasks & Activities</li>
+            <li>Gateways (Decision Points)</li>
+            <li>Sequence Flows</li>
+            <li>Pools & Lanes</li>
+            <li>Data Objects</li>
+          </ul>
+        </div>
+
+        <div class="info-section">
+          <h4>Features:</h4>
+          <ul>
+            <li>Full BPMN 2.0 compliance</li>
+            <li>XML import/export</li>
+            <li>SVG export</li>
+            <li>Industry standard notation</li>
+            <li>Validation</li>
+          </ul>
+        </div>
+
+        <div class="info-section">
+          <h4>Usage:</h4>
+          <ul>
+            <li>Click elements in the palette</li>
+            <li>Use the hand tool to pan</li>
+            <li>Use the lasso to select multiple</li>
+            <li>Right-click for context menu</li>
+          </ul>
+        </div>
+      </aside>
+
+      <div id="canvas-container" class="canvas-container"></div>
+    </div>
+  </div>
+
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>
